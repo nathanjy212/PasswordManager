@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="hello.css">
+</head>
+<header>
+    <h1 class="logo"></h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <!-- <li><a href="#">Blog</a></li> -->
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+    <div class="signIn">
+        <button id="sign-button" onclick="login()">Sign Up</button>
+        <button id="login-button" onclick="register()">Log In</button>
+
+    </div>
+</header>
+<body>
+    <div class="content">
+        <section>
+            <div class="container">
+                <h2 class="text-center">All Your Passwords Secure</h2>
+                <div class="form-box">
+
+
+                    <div class="login-container" id="login">
+                        <div class="top">
+                            <span>Don't have an Account?<a href="#" onclick="register()">Sign Up</a></span>
+                            <div class="signHead">Login</div>
+                        </div>
+                        
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Email">
+                            <i class="bx bx-envelop"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" class="input-field" placeholder="Password">
+                            <i class="bx bx-lock-alt"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" class="submit" value="Sign In">
+                        </div>
+                        <!-- <div class="two-col">
+                            <div class="one">
+                                <input type="checkbox" is="login-check">
+                                <label for="register-check">Remember Me</label>
+                            </div>
+                            <div class="two">
+                                <label><a href="#"> Forgot Password?</a></label>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+                    <div class="register-container" id="register">
+                        <div class="top">
+                            <span>Have an Account?<a href="#" onclick="login()">Login</a></span>
+                            <div class="signHead">Sign Up</div>
+                        </div>
+                        <div class="two-forms">
+                            <div class="input-box">
+                                <input type="text" class="input-field" placeholder="Firstname">
+                                <i class="bx bx-user"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-field" placeholder="Lastname">
+                                <i class="bx bx-user"></i>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Email">
+                            <i class="bx bx-envelop"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" class="input-field" placeholder="Password">
+                            <i class="bx bx-lock-alt"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" class="submit" value="Register">
+                        </div>
+                        <!-- <div class="two-col">
+                            <div class="one">
+                                <input type="checkbox" is="register-check">
+                                <label for="register-check">Remember Me</label>
+                            </div>
+                            <div class="two">
+                                <label><a href="#">Terms & conditions</a></label>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+<script>
+    let a = document.getElementById("login-button");
+    let b = document.getElementById("sign-button");
+    let x = document.getElementById("login");
+    let y = document.getElementById("register");
+
+    function login() {
+
+        if (window.innerWidth <= 540) {
+            x.style.left = "-5px";
+            y.style.right = "-320px";
+
+        } else {
+            x.style.left = "50px";
+            y.style.right = "-520px";
+        }
+
+        
+    }
+
+    function register() {
+
+        if (window.innerWidth <= 540) {
+            x.style.left = "-500px";
+            y.style.right = "50px"
+        }
+        x.style.left = "-500px";
+        y.style.right = "50px"
+    }
+
+
+//     function responsiveFunction() {
+//   if (window.innerWidth < 600) {
+//     // Code for small screens
+//     console.log("This is a small screen!");
+//   } else {
+//     // Code for large screens
+//     console.log("This is a large screen!");
+//   }
+// }
+
+</script>
+
+</body>
+</html>
+
+
+
+<!-- <div>
+    <div class="signUpForm flex-item">
+        <div class="front">
+            <h1 class="title">Create Your Account</h1>
+            <p>The ultimate password platform</p>
+            <p>Save, share, and manage all passwords</p>
+            <p><strong>It's free to join and easy to use.</strong></p>
+            <form action="">
+                <div class="form__group">
+                    <label for="email" class="form__label">Your Email <span class="form__tooltip" data-tooltip="Please enter your email">?</span></label>
+                    <input class="form__input" type="email" id="email" name="email">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="password">Password <span class="form__tooltip" data-tooltip="Minimum 12 characters, at least one capital and one number">?</span></label>
+                    <input class="form__input" type="password" id="password" name="password">
+                </div>
+                <button class="button">Sign up now</button>
+            </form>
+        </div>
+        
+
+    </div>
+</div> -->
