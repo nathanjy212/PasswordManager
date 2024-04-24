@@ -11,9 +11,18 @@ import {
 } from "react-router-dom"
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <About />
+  },
+  {
+    path: "/contact",
+    element: <Contact />
+  },
+  {
+    path: "/mainPage",
     element: <MainPage />
   },
   {
@@ -21,6 +30,19 @@ const router = createBrowserRouter([
     element: <LoggedIn />
   }
 ])
+
+
+// const router = createBrowserRouter([
+   
+//   {
+//     path: "/",
+//     element: <MainPage />
+//   },
+//   {
+//     path: "/passwordManager",
+//     element: <LoggedIn />
+//   }
+// ])
 
 
 

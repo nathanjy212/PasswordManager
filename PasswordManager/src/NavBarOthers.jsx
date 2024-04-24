@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './MainPage.css'
 
-function NavBar({ onLoginClick, onRegisterClick }) {
+function NavBarOthers() {
 
     return(
         <header>
@@ -19,11 +19,11 @@ function NavBar({ onLoginClick, onRegisterClick }) {
                     <span></span>
                 </label>
                 <div class="signIn">
-                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="sign-button" onClick={onRegisterClick}>Sign Up</button></a>
-                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="login-button" onClick={onLoginClick}>Log In</button></a>
+                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="sign-button">Sign Up</button></a>
+                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="login-button">Log In</button></a>
                 </div>
         </header>
     )
 }
 
-export default NavBar;
+export default NavBarOthers;

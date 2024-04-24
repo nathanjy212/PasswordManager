@@ -1,14 +1,14 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './MainPage.css'
-import NavBar from './NavBar';
+import NavBarOthers from './NavBarOthers';
 import Collab from "./assets/collaboration.jpg"
 
 
 function About() {
     return(
         <div>
-            <NavBar/>
+            <NavBarOthers/>
                 <body>
                     <div class="content">
                         <section>
@@ -21,7 +21,7 @@ function About() {
                                         <p>Take the guesswork out of password management, and secret sharing
                                             so that you can keep your teammates safe and your business moving.
                                         </p>
-                                        <button id="try-button">Try it free!</button>
+                                        <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="try-button">Try it free!</button></a>
                                     </div>
                                     <div class="image-description">
                                         <img src= {Collab} alt="people collaborating"/>

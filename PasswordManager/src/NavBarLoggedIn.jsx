@@ -12,7 +12,7 @@ function NavBarLoggedIn(props) {
 
     async function logOut() {
         const response = await axios.post('/api/users/logout')
-        navigate('/') 
+        navigate('/mainPage') 
     }
 
     return(
