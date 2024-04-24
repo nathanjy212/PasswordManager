@@ -6,6 +6,9 @@ const users = require('./backend/user.api.cjs')
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
+// need to add this for deployment
+const path = require('path')
+
 const app = express();
 
 
@@ -28,24 +31,38 @@ app.use('/api/passwordManager', passwordManager);
 // app.use('/api/pokemon', pokemon);
 app.use('/api/users', users);
 
-app.get('/', function(req, res) {
-    res.send("This is the FIRST GET request")
-});
 
-app.get('/', function(req, res) {
-    res.send("This is SECOND GET request");
-})
-
-app.get('/', function(req, res) {
-    res.send("This is THIRD GET request");
-})
-
-app.put('/', function(req, res) {
-    res.send("This is a PUT request")
+// need to add this for deployment
+let frontend_dir = path.join(__dirname, 'dist')
+app.use(express.static(frontend_dir))
+app.get('*', function (req, res) {
+    console.log("received request")
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
 
-
-app.listen(8000, function() {
+app.listen(8000 || process.env.PORT, function() {
     console.log("Starting app now...")
 })
+
+
+// app.listen(8000, function() {
+//     console.log("Starting app now...")
+// })
+
+
+// app.get('/', function(req, res) {
+//     res.send("This is the FIRST GET request")
+// });
+
+// app.get('/', function(req, res) {
+//     res.send("This is SECOND GET request");
+// })
+
+// app.get('/', function(req, res) {
+//     res.send("This is THIRD GET request");
+// })
+
+// app.put('/', function(req, res) {
+//     res.send("This is a PUT request")
+// })
