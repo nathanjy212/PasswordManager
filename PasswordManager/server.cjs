@@ -36,6 +36,10 @@ app.get('/', function(req, res) {
     res.send("This is SECOND GET request");
 })
 
+app.get('/', function(req, res) {
+    res.send("This is THIRD GET request");
+})
+
 app.put('/', function(req, res) {
     res.send("This is a PUT request")
 })
