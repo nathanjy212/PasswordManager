@@ -33,7 +33,7 @@ function MainPage() {
             Password: passwordLogInState,
           });
   
-          navigate('https://nathanyap-akshayrao-project3.onrender.com/passwordManager');
+          navigate('/passwordManager');
         } catch (error) {
             setErrorMsgLogInState(error.response.data);
         }
@@ -72,7 +72,7 @@ function MainPage() {
           setUsernameRegisterState('');
           setVerifyPasswordState('');
 
-          navigate('https://nathanyap-akshayrao-project3.onrender.com/passwordManager');
+          navigate('/passwordManager');
         } catch (error) {
             setErrorRegisterMsgState(error.response.data);
         }

@@ -110,7 +110,7 @@ router.post('/', async function(req, res) {
 
     try {
         const response = await PasswordModel.insertPassword(newPassword)
-        res.cookie('passwordOwner', "nathan");
+        res.cookie('passwordOwner', newPassword.owner);
         return res.send(response);
     } catch(error) {
         res.status(400);
@@ -159,13 +159,15 @@ router.delete('/:passwordId', async function(req, res) {
 
 
     try {
-        const deletePasswordResponse = await PasswordModel.deletePassword(passwordId);
+        // const deletePasswordResponse = await PasswordModel.deletePassword(passwordId);
+        const deletePasswordResponse = await PasswordModel.getPasswordById(passwordId);
 
         if(deletePasswordResponse !== null && deletePasswordResponse.owner !== owner) {
             res.status(400);
             return res.send("You do not own this Password");
         }
 
+        const deletePasswordNice = await PasswordModel.deletePassword(passwordId);
         return res.send(deletePasswordResponse);
     } catch (error) {
         res.status(400);

@@ -10,17 +10,17 @@ function NavBar({ onLoginClick, onRegisterClick }) {
             <input type="checkbox" id="nav-toggle" class="nav-toggle" />
                 <nav>
                     <ul>
-                        <li><a href="https://nathanyap-akshayrao-project3.onrender.com/">Home</a></li>
-                        <li><a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage">PasswordManager</a></li>
-                        <li><a href="https://nathanyap-akshayrao-project3.onrender.com/contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/mainPage">PasswordManager</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
                 <label for="nav-toggle" class="nav-toggle-label">
                     <span></span>
                 </label>
                 <div class="signIn">
-                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="sign-button" onClick={onRegisterClick}>Sign Up</button></a>
-                    <a href="https://nathanyap-akshayrao-project3.onrender.com/mainPage"><button id="login-button" onClick={onLoginClick}>Log In</button></a>
+                    <a href="/mainPage"><button id="sign-button" onClick={onRegisterClick}>Sign Up</button></a>
+                    <a href="/mainPage"><button id="login-button" onClick={onLoginClick}>Log In</button></a>
                 </div>
         </header>
     )

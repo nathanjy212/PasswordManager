@@ -12,41 +12,41 @@ import {
 
 
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <About />
-//   },
-//   {
-//     path: "/contact",
-//     element: <Contact />
-//   },
-//   {
-//     path: "/mainPage",
-//     element: <MainPage />
-//   },
-//   {
-//     path: "/passwordManager",
-//     element: <LoggedIn />
-//   }
-// ])
-
-
 const router = createBrowserRouter([
-   
   {
     path: "/",
-    element: <MainPage />
+    element: <About />
   },
   {
-    path: "/about",
-    element: <About />
+    path: "/contact",
+    element: <Contact />
+  },
+  {
+    path: "/mainPage",
+    element: <MainPage />
   },
   {
     path: "/passwordManager",
     element: <LoggedIn />
   }
 ])
+
+
+// const router = createBrowserRouter([
+   
+//   {
+//     path: "/",
+//     element: <MainPage />
+//   },
+//   {
+//     path: "/about",
+//     element: <About />
+//   },
+//   {
+//     path: "/passwordManager",
+//     element: <LoggedIn />
+//   }
+// ])
 
 
 
