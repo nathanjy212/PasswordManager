@@ -19,8 +19,8 @@ function NavBar({ onLoginClick, onRegisterClick }) {
                     <span></span>
                 </label>
                 <div class="signIn">
-                    <a href="/mainPage"><button id="sign-button" onClick={onRegisterClick}>Sign Up</button></a>
-                    <a href="/mainPage"><button id="login-button" onClick={onLoginClick}>Log In</button></a>
+                    <a href="/mainPage"><button id="sign-button" onClick={onRegisterClick}>Sign Up/Log In</button></a>
+                    {/* <a href="/mainPage"><button id="login-button" onClick={onLoginClick}>Log In</button></a> */}
                 </div>
         </header>
     )

@@ -21,8 +21,8 @@ function NavBarLoggedIn(props) {
             <input type="checkbox" id="nav-toggle" class="nav-toggle" />
                 <nav>
                     <ul>
-                        <li><a href="/mainPage">Home</a></li>
-                        <li><a href="/">About</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/mainPage">Password Manager</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>

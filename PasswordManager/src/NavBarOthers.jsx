@@ -19,8 +19,8 @@ function NavBarOthers() {
                     <span></span>
                 </label>
                 <div class="signIn">
-                    <a href="/mainPage"><button id="sign-button">Sign Up</button></a>
-                    <a href="/mainPage"><button id="login-button">Log In</button></a>
+                    <a href="/mainPage"><button id="sign-button">Sign Up/Log In</button></a>
+                    {/* <a href="/mainPage"><button id="login-button">Log In</button></a> */}
                 </div>
         </header>
     )
