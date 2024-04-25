@@ -41,12 +41,12 @@ app.get('*', function (req, res) {
 })
 
 
-// app.listen(8000 || process.env.PORT, function() {
-//     console.log("Starting app now...")
-// })
-app.listen(process.env.PORT || 8000, function() {
+app.listen(8000 || process.env.PORT, function() {
     console.log("Starting app now...")
 })
+// app.listen(process.env.PORT || 8000, function() {
+//     console.log("Starting app now...")
+// })
 
 // app.listen(8000, function() {
 //     console.log("Starting app now...")

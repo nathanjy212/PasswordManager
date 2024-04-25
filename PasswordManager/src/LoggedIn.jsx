@@ -162,7 +162,7 @@ function LoggedIn() {
             const username = response.data.username;
             setUsername(username);
         } catch (e) {
-            navigate('/')
+            navigate('https://nathanyap-akshayrao-project3.onrender.com/mainPage')
         }
      
     }
