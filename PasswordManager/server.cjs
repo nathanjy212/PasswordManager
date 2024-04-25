@@ -37,7 +37,7 @@ let frontend_dir = path.join(__dirname, 'dist')
 app.use(express.static(frontend_dir))
 app.get('*', function (req, res) {
     console.log("received request")
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 
